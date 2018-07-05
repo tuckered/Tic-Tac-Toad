@@ -2,26 +2,29 @@
  box-sizing: border-box; 
 }
 
-header {
-  background-image: url('Images/tic-tac-toe-title.png')
-}
-
 body {
+  font-family: 'Open Sans', sans-serif;
   display: block; 
   justify-content: center; 
   text-align: center;
   margin: auto;
-  width: 50%;
+  width: 80%;
   background-image: url(Images/super-mario-world.jpg);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center; 
 }
 
+img {
+  width: 30em;
+}
+
 .gameboard {
   /* border: 5px solid white; */
   /* margin-left: 30%; */
+  width: 75%;
   height: 20em;
+  margin: auto;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
@@ -34,6 +37,7 @@ body {
   margin-bottom: 5px;
   height: 6em;
   width: 5em;
+  transition: all 1s;
   border-radius: 5px 5px 5px 5px;
   /* background-color: rgb(245, 237, 227); */
 }
@@ -59,31 +63,64 @@ div.cell-crosses {
 footer {
   display: flex;
   justify-content: space-between;
-  border: 2px solid black;
+  border: 2px solid white;
+  margin: auto;
   height: 50px;
-  width: auto;
+  width: 75%;
 }
 
 .player1 {
   display: flex;
+  background-color: rgb(255, 255, 255);
+  opacity: 0.5;
   justify-content: center;
   width: 25%;
-  border: 2px solid black;
+  border: 2px solid red;
 }
 
 .player2 {
   display: flex;
   justify-content: center;
   width: 25%;
+  background-color: white;
+  opacity: 0.5;
+  border: 2px solid red;
+}
+
+.selected1 {
+  display: flex;
+  justify-content: center;
+  width: 25%;
+  background-color: blue;
   border: 2px solid red;
 }
 
 .winner {
-  border: 2px solid black;
+  border: 2px solid rgb(255, 209, 2);
   background-color: white;
   align-self: center;
   justify-content: center;
   align-content: center;
   height: 100%;
   width: 50%;
+}
+
+#red-toad-wins {
+  text-align: center;
+  height: 2.5em;
+  width: 7em;
+}
+
+#blue-toad-wins {
+  text-align: center;
+  height: 2.5em;
+  width: 7em;
+}
+
+#reset-btn {
+  height: 2.5em;
+  border-radius: 5px 5px 5px 5px;
+  background-color: white;
+  margin: auto;
+  align-content: center;
 }
