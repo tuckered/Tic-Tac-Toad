@@ -64,7 +64,7 @@ var gameCounter = function() {
       sq3.classList.contains(cellClass)) {
         if (sq1.classList.contains('cell-crosses')) {
           redToadWins.classList.remove('hide')
-        } else if (sq1.classList.contains('cell-noughts')) {
+        } else if (sq1.classList.contains('cell-noughts') && turnCount !== 9) {
           blueToadWins.classList.remove('hide')
         }
         // winMessage = 'Winner!!'
@@ -72,6 +72,7 @@ var gameCounter = function() {
       // winnerDeclare.textContent = winMessage
       player2.textContent = ''
       player1.textContent = ''
+      
       console.log(winMessage) 
       }
     }
