@@ -13,6 +13,7 @@ var cell9 = document.querySelector('#cell9')
 
 var redToadWins = document.querySelector('#red-toad-wins')
 var blueToadWins = document.querySelector('#blue-toad-wins')
+var drawGame = document.querySelector('#draw-game')
 
 var player1 = document.querySelector('.player1')
 var player2 = document.querySelector('.player2')
@@ -23,75 +24,80 @@ var turnCount = 0
 var currentPlayer = ''
 var winMessage = ''
 
-var resetGame = function() {
-  for (var i = 0; i < allCells.length; i++){
-    allCells[i].classList.remove('cell-crosses', 'cell-noughts')
-    turnCount = 0
-    winMessage = ''
-  }
-}
-
 var gameCounter = function() {
 
-  turnCount++
+  if (!event.target.classList.contains('cell-crosses') && !event.target.classList.contains('cell-noughts')) {
 
-  if (turnCount % 2 === 0) {
-  event.target.classList.add('cell-crosses')
-  player1.textContent = "Your turn"
-  player2.textContent = ''
-  currentPlayer = 'cell-crosses'
-  // winMessage = 'Red Toad Wins!!'
-  // winMessage = redToadWins
-  console.log('Player 1\s turn')
+    turnCount++
 
-  } else if (turnCount % 2 === 1) {
-    event.target.classList.add('cell-noughts')
-    player2.textContent = "Your turn"
-    player1.textContent = ''
-    currentPlayer = 'cell-noughts'
-    // debugger
-    // winMessage = 'Blue Toad Wins!!'
-    // winMessage = blueToadWins
-    console.log('Player 2\s turn')
-  }
+    if (turnCount % 2 === 0) {
+    event.target.classList.add('cell-crosses')
+    player1.textContent = "Your turn"
+    player2.textContent = ''
+    currentPlayer = 'cell-crosses'
+    // winMessage = 'Red Toad Wins!!'
+    // winMessage = redToadWins
+    console.log('Player 1\s turn')
 
-  if (winMessage === '' && turnCount === 9) {
-  winnerDeclare.textContent = "You guys drew!"
-  player2.textContent = ''
-  player1.textContent = ''
-  console.log("You guys drew!")
-  }
+    } else if (turnCount % 2 === 1) {
+      event.target.classList.add('cell-noughts')
+      player2.textContent = "Your turn"
+      player1.textContent = ''
+      currentPlayer = 'cell-noughts'
+      // debugger
+      // winMessage = 'Blue Toad Wins!!'
+      // winMessage = blueToadWins
+      console.log('Player 2\s turn')
+    }
 
-  var lineCheck = function(sq1, sq2, sq3, cellClass, winMessage) {
-    if (sq1.classList.contains(cellClass) && 
-    sq2.classList.contains(cellClass) && 
-    sq3.classList.contains(cellClass)) {
-    winMessage = 'Winner!!'
-    winnerDeclare.textContent = winMessage
+    if (winMessage === '' && turnCount === 9) {
+    // winnerDeclare.textContent = "You guys drew!"
     player2.textContent = ''
     player1.textContent = ''
-    console.log(winMessage) 
+    drawGame.classList.remove('hide')
+    console.log("You guys drew!")
     }
-  }
 
-  lineCheck(cell1, cell2, cell3, currentPlayer, winMessage)
-  lineCheck(cell4, cell5, cell6, currentPlayer, winMessage)
-  lineCheck(cell7, cell8, cell9, currentPlayer, winMessage)
-  lineCheck(cell1, cell4, cell7, currentPlayer, winMessage)
-  lineCheck(cell2, cell5, cell8, currentPlayer, winMessage)
-  lineCheck(cell3, cell6, cell9, currentPlayer, winMessage)
-  lineCheck(cell1, cell5, cell9, currentPlayer, winMessage)
-  lineCheck(cell3, cell5, cell7, currentPlayer, winMessage)
-  
+    var lineCheck = function(sq1, sq2, sq3, cellClass, winMessage) {
+      if (sq1.classList.contains(cellClass) && 
+      sq2.classList.contains(cellClass) && 
+      sq3.classList.contains(cellClass)) {
+        if (sq1.classList.contains('cell-crosses')) {
+          redToadWins.classList.remove('hide')
+        } else if (sq1.classList.contains('cell-noughts')) {
+          blueToadWins.classList.remove('hide')
+        }
+        // winMessage = 'Winner!!'
+      // redToadWins.classList.remove('hide')
+      // winnerDeclare.textContent = winMessage
+      player2.textContent = ''
+      player1.textContent = ''
+      console.log(winMessage) 
+      }
+    }
+
+    lineCheck(cell1, cell2, cell3, currentPlayer, winMessage)
+    lineCheck(cell4, cell5, cell6, currentPlayer, winMessage)
+    lineCheck(cell7, cell8, cell9, currentPlayer, winMessage)
+    lineCheck(cell1, cell4, cell7, currentPlayer, winMessage)
+    lineCheck(cell2, cell5, cell8, currentPlayer, winMessage)
+    lineCheck(cell3, cell6, cell9, currentPlayer, winMessage)
+    lineCheck(cell1, cell5, cell9, currentPlayer, winMessage)
+    lineCheck(cell3, cell5, cell7, currentPlayer, winMessage)
+  }
 }
+
 
 var resetGame = function() {
   for (var i = 0; i < allCells.length; i++){
     allCells[i].classList.remove('cell-crosses', 'cell-noughts')
     turnCount = 0
     winMessage = ''
+    winnerDeclare.textContent = winMessage
   }
 }
+
+// img.classList.remove('hide')
 
 gameBoard.addEventListener('click', gameCounter)
 resetBtn.addEventListener('click', resetGame)

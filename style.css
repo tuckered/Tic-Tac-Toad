@@ -31,7 +31,7 @@ img {
 }
 
 .gameboard div {
-  border: 5px solid rgba(255,255,255,0.7);
+  border: 5px solid rgba(255, 255, 255, 0.7);
   flex: 0 0 32%;
   margin-top: 5px;
   margin-bottom: 5px;
@@ -39,6 +39,7 @@ img {
   width: 5em;
   transition: all 1s;
   border-radius: 5px 5px 5px 5px;
+  box-shadow: 1px 1px rgb(168, 167, 167);
   /* background-color: rgb(245, 237, 227); */
 }
 
@@ -63,7 +64,7 @@ div.cell-crosses {
 footer {
   display: flex;
   justify-content: space-between;
-  border: 2px solid white;
+  /* border: 2px solid white; */
   margin: auto;
   height: 50px;
   width: 75%;
@@ -71,20 +72,24 @@ footer {
 
 .player1 {
   display: flex;
-  background-color: rgb(255, 255, 255);
-  opacity: 0.5;
   justify-content: center;
+  background-color: white;
+  opacity: 0.8;
   width: 25%;
-  border: 2px solid red;
+  border: 1px solid rgb(168, 167, 167);
+  border-radius: 5px 5px 5px 5px;
+  box-shadow: 1px 1px rgb(168, 167, 167);
 }
 
 .player2 {
   display: flex;
   justify-content: center;
-  width: 25%;
   background-color: white;
-  opacity: 0.5;
-  border: 2px solid red;
+  opacity: 0.8;
+  width: 25%;
+  border: 1px solid rgb(168, 167, 167);
+  border-radius: 5px 5px 5px 5px;
+  box-shadow: 1px 1px rgb(168, 167, 167);
 }
 
 .selected1 {
@@ -96,13 +101,15 @@ footer {
 }
 
 .winner {
-  border: 2px solid rgb(255, 209, 2);
+  border: 5px solid rgba(255, 255, 255, 0.7);
   background-color: white;
   align-self: center;
   justify-content: center;
   align-content: center;
   height: 100%;
   width: 50%;
+  border-radius: 5px 5px 5px 5px;
+  box-shadow: 1px 1px;
 }
 
 #red-toad-wins {
@@ -117,10 +124,22 @@ footer {
   width: 7em;
 }
 
+#draw-game {
+  text-align: center;
+  height: 2.5em;
+  width: 7em;
+}
+
+.hide {
+  display: none;
+}
+
 #reset-btn {
   height: 2.5em;
   border-radius: 5px 5px 5px 5px;
   background-color: white;
-  margin: auto;
+  margin: 3em;
+
   align-content: center;
 }
+
