@@ -1,5 +1,6 @@
-# TIC-TAC_TOAD
+# TIC-TAC-TOAD
 
+[Tic-Tac-Toad](https://tuckered.github.io/Tic-Tac-Toad/)
 
 This is a simple browser game based on tic-tac-toe. 2 players take turns to try and get 3 in a row either vetically, hoirzontally or diagonally. 
 
