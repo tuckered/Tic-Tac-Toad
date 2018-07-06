@@ -3,27 +3,39 @@
 }
 
 body {
+  /* border: 2px solid black; */
   font-family: 'Open Sans', sans-serif;
   display: block; 
   justify-content: center; 
   text-align: center;
   margin: auto;
-  width: 80%;
+  width: 500px;
+  height: 100vh;
   background-image: url(Images/super-mario-world.jpg);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center; 
 }
 
+header {
+  /* border: 1px solid black; */
+  margin: auto;
+  width: 75%;
+  padding-top: 30px;
+}
+
 img {
-  width: 30em;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  /* height: auto; */
 }
 
 .gameboard {
-  /* border: 5px solid white; */
+  /* border: 5px solid yellow; */
   /* margin-left: 30%; */
   width: 75%;
-  height: 20em;
+  /* height: 20em; */
   margin: auto;
   display: flex;
   flex-wrap: wrap;
@@ -32,10 +44,11 @@ img {
 
 .gameboard div {
   border: 5px solid rgba(255, 255, 255, 0.7);
+  display: flex;
   flex: 0 0 32%;
   margin-top: 5px;
   margin-bottom: 5px;
-  height: 6em;
+  height: 8em;
   width: 5em;
   transition: all 1s;
   border-radius: 5px 5px 5px 5px;
@@ -63,8 +76,9 @@ div.cell-crosses {
 
 footer {
   display: flex;
+  align-content: center;
   justify-content: space-between;
-  /* border: 2px solid white; */
+  /* border: 2px solid red; */
   margin: auto;
   height: 50px;
   width: 75%;
@@ -73,8 +87,9 @@ footer {
 .player1 {
   display: flex;
   justify-content: center;
-  background-color: white;
-  opacity: 0.8;
+  color: #E50017;
+  font-weight: bold;
+  background-color: rgba(255, 255, 255, 0.7);
   width: 25%;
   border: 1px solid rgb(168, 167, 167);
   border-radius: 5px 5px 5px 5px;
@@ -84,20 +99,13 @@ footer {
 .player2 {
   display: flex;
   justify-content: center;
-  background-color: white;
-  opacity: 0.8;
+  color: #3868EF;
+  font-weight: bold;
+  background-color: rgba(255, 255, 255, 0.7);
   width: 25%;
   border: 1px solid rgb(168, 167, 167);
   border-radius: 5px 5px 5px 5px;
   box-shadow: 1px 1px rgb(168, 167, 167);
-}
-
-.selected1 {
-  display: flex;
-  justify-content: center;
-  width: 25%;
-  background-color: blue;
-  border: 2px solid red;
 }
 
 .winner {
@@ -113,19 +121,23 @@ footer {
 }
 
 #red-toad-wins {
-  text-align: center;
+  /* border: 1px solid black; */
+  margin-left: auto;
+	margin-right: auto;
   height: 2.5em;
   width: 7em;
 }
 
 #blue-toad-wins {
-  text-align: center;
+  margin-left: auto;
+	margin-right: auto;
   height: 2.5em;
   width: 7em;
 }
 
 #draw-game {
-  text-align: center;
+  margin-left: auto;
+	margin-right: auto;
   height: 2.5em;
   width: 7em;
 }
@@ -138,8 +150,29 @@ footer {
   height: 2.5em;
   border-radius: 5px 5px 5px 5px;
   background-color: white;
-  margin: 3em;
-
+  margin-top: 2em;
   align-content: center;
+  opacity: 0.8;
 }
 
+#big-red-toad {
+  background-image: url(Images/red-toad-head.png)
+}
+
+#big-blue-toad {
+  background-image: url(Images/blue-toad-head.png)
+}
+
+
+      /* .toad-legs {
+        background-image: url(Images/youre-a-winner-toad-legs.jpeg);
+        background-size: contain;
+        background-repeat: repeat;
+        width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+        /* display: block; */
+        /* height: 0;
+        padding-top: 66.64%;
+        z-index: ; */
+      /* }  */
