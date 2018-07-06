@@ -26,7 +26,7 @@ var currentPlayer = ''
 var winMessage = ''
 var inPlay = true
 
-player2.textContent = 'YOUR TURN!!'
+player2.textContent = 'YOUR TURN!'
 
 var gameCounter = function() {
   gameBoard.classList.remove('toad-legs')
@@ -43,7 +43,7 @@ var gameCounter = function() {
 
     } else if (turnCount % 2 === 1) {
       event.target.classList.add('cell-noughts')
-      player1.textContent = 'YOUR TURN!!'
+      player1.textContent = 'YOUR TURN!'
       player2.textContent = ''
       currentPlayer = 'cell-noughts'
       console.log('Player 2\s turn')
@@ -99,6 +99,7 @@ var resetGame = function() {
     turnCount = 0
     winMessage = ''
     inPlay = true
+    player2.textContent = 'YOUR TURN!'
   }
 }
 
