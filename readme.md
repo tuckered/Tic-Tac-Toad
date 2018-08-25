@@ -1,5 +1,5 @@
 # TIC-TAC-TOAD
-======
+
 
 Play Here: [Tic-Tac-Toad](https://tuckered.github.io/Tic-Tac-Toad/)
 
@@ -9,7 +9,7 @@ The idea for this game came from a bad play on works. It initially started as br
 
 
 ## THE GAME AND THE RULES
-======
+
 
 1. Blue will always start and they get a choice of where to go.
 2. Red takes the next turn and turns continue until someone gets a line.
@@ -18,14 +18,14 @@ The idea for this game came from a bad play on works. It initially started as br
 
 
 ## TECHNOLOGIES USED
-======
+
 * HTML
 * CSS
 * JAVASCRIPT
 
 
 ## PRODUCTION PROCESS
-======
+
 The game started out as a coloured grid that would get filled when clicked upon. At this point there were no statements to decide how a winner would be decided. 
 
 To take turns, a TURNCOUNT variable was made and added to each time a click was made. An IF statement was used so if TURNCOUNT divisible by 2, it would be player 1's turn and if not it was player 2's turn. 
@@ -36,7 +36,7 @@ A function lineCheck condensed these win conditions and an IF statement within i
 
 
 ## ADDITIONAL FEATURES / PROBLEMS
-======
+
 1. Currently BLUE TOAD will always start the game. A selector of who will begin the game would be ideal. 
 2. The player indicator does not fit the style of the rest of the game. Changing this to a coloured Toad head or something similar would fit in with the theme. 
 3. There is no counter for how many rounds each player has won. I want to have a feature that the players can pick how many rounds they want to play at the beginning of the game. 
