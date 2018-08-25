@@ -4,7 +4,8 @@
 
 body {
   /* border: 2px solid black; */
-  font-family: 'Open Sans', sans-serif;
+  font-family: 'Indie Flower', cursive;
+  font-weight: bold;
   display: block; 
   justify-content: center; 
   text-align: center;
@@ -46,9 +47,9 @@ img {
 }
 
 .gameboard div {
-  border: 5px solid rgba(255, 255, 255, 0.7);
+  border: 5px solid rgba(255, 255, 255, 0.8);
   display: flex;
-  flex: 0 0 32%;
+  flex: 0 0 30%;
   margin-top: 5px;
   margin-bottom: 5px;
   height: 10em;
@@ -59,7 +60,7 @@ img {
   /* background-color: rgb(245, 237, 227); */
 }
 
-div.cell-noughts {
+div.red-cell {
   /* background-color: aqua; */
   background-image: url(Images/blue-toad-head.png);
   background-size: contain;
@@ -68,7 +69,7 @@ div.cell-noughts {
   border-radius: 5px 5px 5px 5px;
 }
 
-div.cell-crosses {
+div.blue-cell {
   /* background-color: rgb(255, 89, 11); */
   background-image: url(Images/red-toad-head.png);
   background-size: contain;
@@ -88,30 +89,37 @@ footer {
   transition: ease-in 1s;
 }
 
-.player1 {
+.redPlayer {
   display: flex;
   justify-content: center;
-  color: #E50017;
+  color: rgb(240, 51, 70);
   font-weight: bold;
-  background-color: rgba(255, 255, 255, 0.7);
+  text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;
   width: 25%;
   font-size: 35px;
-  border: 1px solid rgb(168, 167, 167);
   border-radius: 5px 5px 5px 5px;
-  box-shadow: 1px 1px rgb(168, 167, 167);
 }
 
-.player2 {
+.redPlayerBorder {
+  border: 5px solid rgb(240, 51, 70);
+  box-shadow: 1px 1px rgb(124, 27, 37);
+}
+
+.bluePlayer {
   display: flex;
   justify-content: center;
   color: #3868EF;
   font-weight: bold;
-  background-color: rgba(255, 255, 255, 0.7);
+  text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;
   width: 25%;
   font-size: 35px;
-  border: 1px solid rgb(168, 167, 167);
   border-radius: 5px 5px 5px 5px;
-  box-shadow: 1px 1px rgb(168, 167, 167);
+}
+
+.bluePlayerBorder {
+  border: 5px solid #3868EF;
+  box-shadow: 1px 1px rgbrgb(33, 63, 143);
+  
 }
 
 .winner {
@@ -157,9 +165,11 @@ footer {
 
 #reset-btn {
   border-radius: 5px 5px 5px 5px;
-  background-color: white;
-  margin-top: 2em;
-  font-size: 25px;
+  background-color: rgba(255, 255, 255, 0.8);
+  font-family: 'Indie Flower', cursive;
+  font-weight: bold;
+  margin-top: 0.2em;
+  font-size: 2em;
   padding: 0.5em;
 }
 
