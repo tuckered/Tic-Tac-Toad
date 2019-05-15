@@ -5,7 +5,7 @@ Play Here: [Tic-Tac-Toad](https://tuckered.github.io/Tic-Tac-Toad/)
 
 A colourful tic-tac-toe browser game. 2 players take turns to try and get 3 coloured Toad heads in a row either vertically, horizontally or diagonally. 
 
-The idea for this game came from a bad play on works. It initially started as bright coloured, futuristic looking blocks but once the mechanics were written, I decided to run with the Toad theme for styling. Players use either a blue or red Toad head, and a Super Mario themed font and background complete the video game look. 
+The idea for this game came from a bad play on words. It initially started as bright coloured, futuristic looking blocks but once the mechanics were written, I decided to run with the Toad theme for styling. Players use either a blue or red Toad head, and a Super Mario themed font and background complete the video game look. 
 
 
 ## THE GAME AND THE RULES
